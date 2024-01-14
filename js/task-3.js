@@ -1,11 +1,7 @@
 "use strick";
 
-const nameInput = document.getElementById("input#name-input");
-const nameOutput = document.getElementById("span#name-output");
-
-nameInput.addEventListener("input", function () {
-    const trimmedValue = nameInput.value.trim();
-    const outputName = trimmedValue === "" ? "Anonymous" : trimmedValue;
-    nameOutput.textContent = outputName;
+document.getElementById('name-input').addEventListener('input', function () {
+    const enteredName = this.value.trim();
+    document.getElementById('name-output').textContent = enteredName === '' ? 'Anonymous' : enteredName;
     });
 
