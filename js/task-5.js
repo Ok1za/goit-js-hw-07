@@ -1,4 +1,4 @@
-"use strick";
+"use strict";
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)

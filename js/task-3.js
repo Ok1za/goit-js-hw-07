@@ -1,4 +1,4 @@
-"use strick";
+"use strict";
 
 document.getElementById('name-input').addEventListener('input', function () {
     const enteredName = this.value.trim();

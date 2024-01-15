@@ -1,4 +1,4 @@
-"use strick";
+"use strict";
 
 document.querySelector('.login-form').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -12,7 +12,7 @@ document.querySelector('.login-form').addEventListener('submit', function (event
     if (enteredEmail === '' || enteredPassword === '') {
         alert('All form fields must be filled in');
     } else {
-        var formData = {
+        const formData = {
             email: enteredEmail,
             password: enteredPassword
         };

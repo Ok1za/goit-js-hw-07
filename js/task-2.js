@@ -1,4 +1,4 @@
-"use strick";
+"use strict";
 
 const images = [
   {
@@ -32,14 +32,8 @@ const images = [
 
 const galleryElement = document.querySelector(".gallery");
 
-images.forEach(function(image) {
-  const listItem = document.createElement("li");
-  listItem.classList.add("gallery-item");
+const listItemsHtml = images.map(image => {
+  return `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}"></li>`;
+}).join('');
 
-  const imageElement = document.createElement("img");
-  imageElement.src = image.url;
-  imageElement.alt = image.alt;
-
-  listItem.appendChild(imageElement);
-  galleryElement.appendChild(listItem);
-  });
+galleryElement.insertAdjacentHTML("beforeend", listItemsHtml);
